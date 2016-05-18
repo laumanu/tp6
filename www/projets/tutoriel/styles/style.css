@@ -1,0 +1,67 @@
+html {
+  font-size: 10px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+h1 {
+  font-size: 60px;
+  text-align: center;
+}
+
+p, li {
+  font-size: 16px;  
+  line-height: 2;
+  letter-spacing: 1px;
+}
+
+
+html {
+  background-color: #00539F;
+}
+
+body {
+  width: 600px;
+  margin: 0 auto;
+  background-color: #FF9500;
+  padding: 0 20px 20px 20px;
+  border: 5px solid black;
+}
+
+h1 {
+  margin: 0;
+  padding: 20px 0;  
+  color: #00539F;
+  text-shadow: 3px 3px 1px black;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+#retour{
+border: solid;
+ position:absolute;
+ top:0;
+ right:0;
+ padding: 30px;
+ margin: -20px;
+ border-radius: 20px;  
+ background-image:radial-gradient(#8c8c8c , black);
+ opacity:100%; 
+
+}
+#retour a{
+    color: darkgreen;
+    
+}
+#retour:hover{
+   background-image:radial-gradient(#8c8c8c , black);
+     opacity: 0.5;   
+}
+button{
+    margin-top: 5px;
+    border-radius: 6px;
+    background: #CCB366;
+    opacity: 100%;
+}

@@ -1,20 +1,18 @@
 @import url(https://fonts.googleapis.com/css?family=Pacifico);
 @import url(https://fonts.googleapis.com/css?family=Lobster);
-body{
-    background: black;
-}
 
 #conteneur
 {
 	border:solid;
+     position:relative;
 	border-radius:25px;
-	max-width:800px;
-    min-height: 900px;
+	max-width:50%;
+    min-height: 30%;
 	margin-left:290px;
 	margin-right:170px;
    border-color: aqua;
    box-shadow: inset 0 0 5px 5px red; 
- 
+
 }
 menu{
     animation-name: bordercolor;
@@ -23,8 +21,10 @@ animation-duration: 4s;
  -webkit-animation-duration: 4s;
      animation-iteration-count: infinite;
  animation-direction: alternate;
+   
 }
 @-webkit-keyframes bordercolor {
+   
 	0%   {border:5px solid red;}
     25%  {border: 5px solid yellow;}
     50%  {border: 5px solid blue;}
@@ -38,6 +38,7 @@ animation-duration: 4s;
     text-align: center;
     margin-left: 10px;
     margin-right: 40px;
+    
    
 
  background-image: linear-gradient( to right, red, yellow, red, yellow, red, yellow, red, yellow, red, yellow, red);
@@ -46,8 +47,7 @@ animation-duration: 4s;
 
 .title{
 	font-family: Pacifico;
-    font-size: 80px;
- 
+    font-size:60px;
 	color:white;
 	background: black;
 	mix-blend-mode: multiply;
@@ -56,34 +56,33 @@ animation-duration: 4s;
 
 #conteneur p{
 	color:yellow;
-	margin-left:5%;
-    margin-right: 35%;
-    font-size: 170%;
-    text-align: center;
+    font-size: 130%;
+
 }
 
 #conteneur h2{
 	color:#CC2EFA;
-	margin-left:2%;
+	text-align: center;
 	text-decoration:underline;
 	font-family: Pacifico;
     font-size: 230%;
-    text-align: center;
+
 }
 ul{
 	color:yellow;
-    font-size: 180%
+    font-size: 150%
 }
 li a:link{
 	color:#2EFEF7;
     
 	
  }
- li a:hover {
+li a:hover {
 	color:;
 	text-shadow: 5em 0.1em red;
   transform-style: preserve-3d;
   transition: all 1.0s linear;
+    
  }
  li a :viste{
 	 color:green;
@@ -91,7 +90,7 @@ li a:link{
  li a:active{
 	 color:#0000FF;
  }
- img{
+ .image img{
    width: 80%;
    border:solid white;
     border-radius: 20px;
@@ -100,13 +99,63 @@ li a:link{
     transform: rotate(5deg);
      margin-bottom: 50px;
      
+     
 }
 
-img:hover{
+.image img:hover{
  transition: all 2s;
 transform: rotate(1080deg);
 border-radius: 100%;
+  
 }
 
-
+#labelID{
+  float: right;
+ border: solid;
+color: yellow;
+ position: absolute;
+ top:0px;
+ right:0px;
+ padding: 10px;
+ border-radius:0px 15px  ;  
+ background-image:radial-gradient(#8c8c8c , black);
+ opacity:100%; 
+   border-color: red;
+    z-index:inherit;
+}
+#labelID:hover{
+   background-image:radial-gradient(#8c8c8c , black);
+     opacity: 0.5;  
+     cursor: pointer;
+      
+}
+li div {
+    background: black;
+    border: solid red 2px;
+    border-radius: 10%;
+    font-size:52%;
+   min-width: 5%;
+    opacity: 0;
+    padding: 10px;
+    position: absolute;
+    right:2%;
+    top: -10px;
+    transform: scale(0.4);
+    width: 20%;
+    z-index: 2;
+}
+li{
+    position: relative;
+}
+li:hover div {
+    opacity: 1;
+    transition: 1s;
+    transform: scale(1);
+}
+div span:nth-child(even){
+    color: blue;
+}
+div span:nth-child(odd){
+    color:aquamarine;
+}
 

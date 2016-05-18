@@ -62,20 +62,22 @@ margin-left: 20px;
 
 }
 .mesvideos{
-   
+    min-width: 10%;
     display: flex;
     flex-wrap: wrap; 
     justify-content: center;
     align-items: center;
     align-content: center;
+
     
     
     
 }
 .video2{
+  
     margin-left:5%;
     border: solid ;
-    margin-top:4%;
+    margin-top:90px;;
     margin-left:2%;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
@@ -90,10 +92,11 @@ margin-left: 20px;
 }
 
 .video{
+    
     margin-left: 5%;
     margin-right: 2%;
     border: solid ;
-    margin-top:4%;
+    margin-top:90px;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     border-bottom-left-radius: 20px;

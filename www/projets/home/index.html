@@ -1,31 +1,82 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE HTML >
 <html lang="fr"> 
 <head>
+  
 <title>TP1</title>
     <link rel="stylesheet" type="text/css" href="style.css"/>
-    <link rel="stylesheet" type="text/css" href="common/css/common_style.css"/>
+    
+    <link rel="stylesheet" type="text/css" href="../../common/css/reset.css"/>
+    
+    <link rel="stylesheet" type="text/css" href="../../common/css/common_style.css"/>
+    
+    <style type="text/css"></style>
+     <script src="../../common/icone/icon.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.js"></script>
+
+    
 </head>
 <body>
+    
 <menu id=conteneur>
- <div class="Titre">   
-     <h1 class ="title">Yawo Bosso</h1>
-  </div>    
-<img src="image/laurent.gif" /> 
-         
- 
-<h2>Bienvenue sur mon site web !</h2>
     
-<p>je vous invite à la visiter.les rubriques disponibles, en ordre alphabetique, sont les suivants:</p>
-<audio controls  hidden autoplay>
- <source src="audio/voix.wav" type="audio/wav">
+        <header>
+0000
+     <label id="labelID"><input onclick="Jouer()" type="checkbox" id="sourdine"/>Sourdine</label>
+            </br>#
+             </br>
+             </br>
+           
+        </header>
     
-</audio>
-<ul>
-  <li><a href="../langues/langues.html">Langues</a></li>
-  <li><a href="../pens/pens.html">pens</a></li>
-  <li><a href="../youtube/youtubes.html">YouTube</a></li>
-</ul>
+ </br>
+ </br>
+ </br>
+ </br>
+    <!-- <div class="Titre">   
+         <h1 class ="title">Yawo Bosso</h1>
+      </div>-->  
+    <div class="image">
+     <img src="image/laurent.gif" /> 
+    </div>
+
+
+
+    <h2>Bienvenue sur mon site web !</h2>
+
+   
+    <p>Je vous invite à la visiter.Les rubriques disponibles, en ordre alphabetique, sont les suivantes:</p>
+    <audio  id="audio" >
+     <source src="audio/voix.wav" type="audio/wav">
+
+    </audio>
+    <ul id="ulMenu"></ul>
 </menu>
 
+
+
+ <script id="templateScript" type="text/x-handlebars-template">
+    {{#each projets}}
+     <li>  
+         <a href="../{{file}}">{{{nom}}}</a>
+         
+         {{#if description}}
+            <div > {{description}} 
+                {{#if sujets}}
+                <p style="color:red">Sujets:</p>
+                    {{#each sujets}}
+                         <span> {{this}} </span>
+                    {{/each}}
+                {{/if }}  
+            </div>
+        {{/if}} 
+     </li>
+     {{/each}}
+
+</script>
+<script src = "scripts/menu.js"> </script>
+  
 </body>
 </html>
+
+ 

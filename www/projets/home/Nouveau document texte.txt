@@ -1,0 +1,29 @@
+//   $(function () {
+  // Grab the template script
+  var theTemplateScript = $("#templateScript").html();
+
+  // Compile the template
+  var theTemplate = Handlebars.compile(theTemplateScript);
+
+  // This is the default context, which is passed to the template
+  var context = {
+    projets: [ 
+      { nom:"Langues", file:"langues/langues.html",
+       description:"Pratique de l'utilisation des selecteurs et de la mise en page avec css3",
+       sujets: ["CSS3","HTML5","Selecteurs"]},
+        
+      { nom:"Pens", file:"pens/pens.html",
+       description:"Exercices que j'ai faits sur CodePen"},
+         { nom:"Todo",file:"Todo/todo.html" },
+        { nom:"Todo <span style='color:red'>(Classique</span>)",file:"Todo/todo.html?skin=bred-on-black" },
+        { nom:"Todo (<span style='color:orange'>Orange</span>)",file:"Todo/todo.html?skin=blue-on-orange" },
+        { nom:"Todo (<span style='color:gray'>Gris</span>)",file:"Todo/todo.html?skin=design" },
+        //{ nom:"Todo of Heroes",file:"Todo/todo.html" },
+         {  nom:"Tutoriel",file :"tutoriel/indextu.html" },
+      { nom:"YouTube", file:"youtube/youtubes.html"}
+     
+     
+    ]
+  };
+
+ 

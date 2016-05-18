@@ -1,0 +1,702 @@
+:root {
+  @import url(https://fonts.googleapis.com/css?family=Pacifico);
+}
+:root * {
+  box-sizing: border-box;
+}
+:root html {
+  height: 100%;
+  transition: 1s;
+}
+:root body {
+  background: black;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  transition: 2s;
+}
+:root .todo {
+  border: solid red;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+  padding: 2%;
+  border-radius: 40px;
+  color: red;
+}
+:root header {
+  display: flex;
+}
+:root #input {
+  min-width: 1px;
+  flex: 1;
+  align-content: center;
+  color: black;
+  border: solid red;
+  border-radius: 25px;
+  background-color: red;
+  -webkit-box-shadow: 0px 0px 38px 6px red;
+  padding: 2%;
+  font-weight: 900%;
+}
+:root span {
+  margin-right: 10px;
+  font-size: 180%;
+  margin-top: auto;
+  margin-bottom: auto;
+  transition: 1s;
+}
+:root #todolist {
+  width: 100%;
+}
+:root article {
+  display: flex;
+  margin-top: 2%;
+  position: relative;
+}
+:root .text {
+  display: inline-block;
+  color: white;
+  width: calc(90%);
+  white-space: normal;
+  word-wrap: break-word;
+}
+:root .text:focus {
+  background-color: white;
+  color: black;
+  padding-left: 10px;
+  border-radius: 5px;
+}
+:root img {
+  width: 20px;
+  transition: all 0.5s ease-out;
+  margin-left: 3px;
+  position: absolute;
+  right: 0;
+}
+:root .checkbox {
+  width: 30px;
+  background-color: white;
+  transition: all 0.5s ease-out;
+}
+:root .checkbox:focus {
+  box-shadow: 0 0 5px 5px white;
+  /*  -webkit-filter: drop-shadow(0px 0px 5px white);
+  filter: drop-shadow(10px 5px 10px white);*/
+}
+:root article img:focus {
+  box-shadow: 0 0 5px 5px white;
+  /*  -webkit-filter: drop-shadow(0px 0px 5px white);
+  filter: drop-shadow(10px 5px 10px white);*/
+}
+:root #retour {
+  border: solid ;
+  background: #7f7f7f;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 80%;
+  margin: -2%;
+  padding: 15px;
+  width: 240px;
+  border-radius: 25px;
+  border-width: 4px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  box-shadow: inset 1px 6px 30px 2px #fcfeff;
+  transition: 2s;
+}
+:root #retour:hover {
+  background-image: radial-gradient(#e6e6fa, dimgrey);
+  opacity: 100%;
+}
+:root #retour a {
+  color: green;
+  font-size: 20px;
+}
+:root .titre {
+  color: red;
+  font-family: 'Pacifico', cursive;
+  font-size: 40px;
+  margin-left: 100px;
+  margin-bottom: 30px;
+  margin-right: 86%;
+  transition: 2s;
+}
+:root .checkbox:hover {
+  -moz-box-shadow: 0 0 5px 5px white;
+  -webkit-box-shadow: 0 0 5px 5px white;
+  box-shadow: 0 0 5px 5px white;
+}
+:root .text:hover {
+  border-left: 5px solid white;
+  border-right: 5px solid white;
+  background-color: darkgray;
+  border-radius: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+:root article img:hover {
+  -moz-box-shadow: 0 0 5px 5px white;
+  -webkit-box-shadow: 0 0 5px 5px white;
+  box-shadow: 0 0 5px 5px white;
+}
+:root #todolist:empty::after {
+  content: "Veuillez entrer une nouvelle tâche à faire !";
+  display: block;
+  text-align: center;
+  color: lime;
+  margin-top: 10px;
+}
+:root #donelist .text {
+  color: red;
+  text-decoration: line-through;
+  opacity: 0.8;
+}
+:root #donelist .text {
+  color: gray;
+}
+:root .tache {
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /*.tache:hover button{
+
+    color: coral;
+    background-color: black;
+    opacity: 100%;
+   
+}*/
+}
+:root .tache button {
+  color: red;
+  background-color: black;
+}
+:root .tache #btncompleter {
+  flex: 1;
+}
+:root .tache #btnEffacer {
+  flex: 1;
+  text-align: center;
+}
+:root .tache #btnEffacer img {
+  margin-right: 5px;
+  filter: grayscale(1);
+}
+:root .tache .tache button {
+  color: red;
+  background-color: black;
+}
+:root .tache #btncompleter:hover {
+  color: coral;
+  background-color: black;
+  opacity: 100%;
+}
+:root .tache #btnEffacer:hover {
+  color: coral;
+  background-color: black;
+  opacity: 100%;
+}
+:root .tache .tache:hover img {
+  filter: grayscale(0);
+}
+:root .tache #btncompleter:disabled {
+  display: none;
+}
+:root .tache #btnEffacer:disabled {
+  display: none;
+}
+@media screen and (max-width: 361px) {
+  :root span {
+    font-size: 0;
+  }
+}
+@media screen and (max-height: 480px) {
+  :root .titre {
+    margin-top: -90px;
+  }
+  :root #retour {
+    margin-top: -90px;
+    margin-right: -140px;
+  }
+  :root #retour:hover {
+    margin-top: -5px;
+    margin-right: -8px;
+  }
+}
+:root .leskin {
+  font-size: 20px;
+  margin-right: 5px;
+}
+:root.blue-on-orange {
+  @import url(https://fonts.googleapis.com/css?family=Pacifico);
+}
+:root.blue-on-orange * {
+  box-sizing: border-box;
+}
+:root.blue-on-orange html {
+  height: 100%;
+  transition: 1s;
+}
+:root.blue-on-orange body {
+  background: #FFaa00;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  transition: 2s;
+}
+:root.blue-on-orange .todo {
+  border: solid blue;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+  padding: 2%;
+  border-radius: 40px;
+  color: blue;
+}
+:root.blue-on-orange header {
+  display: flex;
+}
+:root.blue-on-orange #input {
+  min-width: 1px;
+  flex: 1;
+  align-content: center;
+  color: #FFaa00;
+  border: solid blue;
+  border-radius: 25px;
+  background-color: blue;
+  -webkit-box-shadow: 0px 0px 38px 6px blue;
+  padding: 2%;
+  font-weight: 900%;
+}
+:root.blue-on-orange span {
+  margin-right: 10px;
+  font-size: 180%;
+  margin-top: auto;
+  margin-bottom: auto;
+  transition: 1s;
+}
+:root.blue-on-orange #todolist {
+  width: 100%;
+}
+:root.blue-on-orange article {
+  display: flex;
+  margin-top: 2%;
+  position: relative;
+}
+:root.blue-on-orange .text {
+  display: inline-block;
+  color: black;
+  width: calc(90%);
+  white-space: normal;
+  word-wrap: break-word;
+}
+:root.blue-on-orange .text:focus {
+  background-color: black;
+  color: #FFaa00;
+  padding-left: 10px;
+  border-radius: 5px;
+}
+:root.blue-on-orange img {
+  width: 20px;
+  transition: all 0.5s ease-out;
+  margin-left: 3px;
+  position: absolute;
+  right: 0;
+}
+:root.blue-on-orange .checkbox {
+  width: 30px;
+  background-color: black;
+  transition: all 0.5s ease-out;
+}
+:root.blue-on-orange .checkbox:focus {
+  box-shadow: 0 0 5px 5px black;
+  /*  -webkit-filter: drop-shadow(0px 0px 5px white);
+  filter: drop-shadow(10px 5px 10px white);*/
+}
+:root.blue-on-orange article img:focus {
+  box-shadow: 0 0 5px 5px black;
+  /*  -webkit-filter: drop-shadow(0px 0px 5px white);
+  filter: drop-shadow(10px 5px 10px white);*/
+}
+:root.blue-on-orange #retour {
+  border: solid ;
+  background: #7f7f7f;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 80%;
+  margin: -2%;
+  padding: 15px;
+  width: 240px;
+  border-radius: 25px;
+  border-width: 4px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  box-shadow: inset 1px 6px 30px 2px #fcfeff;
+  transition: 2s;
+}
+:root.blue-on-orange #retour:hover {
+  background-image: radial-gradient(#e6e6fa, dimgrey);
+  opacity: 100%;
+}
+:root.blue-on-orange #retour a {
+  color: green;
+  font-size: 20px;
+}
+:root.blue-on-orange .titre {
+  color: blue;
+  font-family: 'Pacifico', cursive;
+  font-size: 40px;
+  margin-left: 100px;
+  margin-bottom: 30px;
+  margin-right: 86%;
+  transition: 2s;
+}
+:root.blue-on-orange .checkbox:hover {
+  -moz-box-shadow: 0 0 5px 5px black;
+  -webkit-box-shadow: 0 0 5px 5px black;
+  box-shadow: 0 0 5px 5px black;
+}
+:root.blue-on-orange .text:hover {
+  border-left: 5px solid black;
+  border-right: 5px solid black;
+  background-color: darkgray;
+  border-radius: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+:root.blue-on-orange article img:hover {
+  -moz-box-shadow: 0 0 5px 5px black;
+  -webkit-box-shadow: 0 0 5px 5px black;
+  box-shadow: 0 0 5px 5px black;
+}
+:root.blue-on-orange #todolist:empty::after {
+  content: "Veuillez entrer une nouvelle tâche à faire !";
+  display: block;
+  text-align: center;
+  color: red;
+  margin-top: 10px;
+}
+:root.blue-on-orange #donelist .text {
+  color: blue;
+  text-decoration: line-through;
+  opacity: 0.8;
+}
+:root.blue-on-orange #donelist .text {
+  color: gray;
+}
+:root.blue-on-orange .tache {
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /*.tache:hover button{
+
+    color: coral;
+    background-color: black;
+    opacity: 100%;
+   
+}*/
+}
+:root.blue-on-orange .tache button {
+  color: blue;
+  background-color: #FFaa00;
+}
+:root.blue-on-orange .tache #btncompleter {
+  flex: 1;
+}
+:root.blue-on-orange .tache #btnEffacer {
+  flex: 1;
+  text-align: center;
+}
+:root.blue-on-orange .tache #btnEffacer img {
+  margin-right: 5px;
+  filter: grayscale(1);
+}
+:root.blue-on-orange .tache .tache button {
+  color: red;
+  background-color: black;
+}
+:root.blue-on-orange .tache #btncompleter:hover {
+  color: coral;
+  background-color: black;
+  opacity: 100%;
+}
+:root.blue-on-orange .tache #btnEffacer:hover {
+  color: coral;
+  background-color: black;
+  opacity: 100%;
+}
+:root.blue-on-orange .tache .tache:hover img {
+  filter: grayscale(0);
+}
+:root.blue-on-orange .tache #btncompleter:disabled {
+  display: none;
+}
+:root.blue-on-orange .tache #btnEffacer:disabled {
+  display: none;
+}
+@media screen and (max-width: 361px) {
+  :root.blue-on-orange span {
+    font-size: 0;
+  }
+}
+@media screen and (max-height: 480px) {
+  :root.blue-on-orange .titre {
+    margin-top: -90px;
+  }
+  :root.blue-on-orange #retour {
+    margin-top: -90px;
+    margin-right: -140px;
+  }
+  :root.blue-on-orange #retour:hover {
+    margin-top: -5px;
+    margin-right: -8px;
+  }
+}
+:root.blue-on-orange .leskin {
+  font-size: 20px;
+  margin-right: 5px;
+}
+:root.design {
+  @import url(https://fonts.googleapis.com/css?family=Pacifico);
+}
+:root.design * {
+  box-sizing: border-box;
+}
+:root.design html {
+  height: 100%;
+  transition: 1s;
+}
+:root.design body {
+  background: #47484B;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  transition: 2s;
+}
+:root.design .todo {
+  border: solid white;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+  padding: 2%;
+  border-radius: 40px;
+  color: white;
+}
+:root.design header {
+  display: flex;
+}
+:root.design #input {
+  min-width: 1px;
+  flex: 1;
+  align-content: center;
+  color: #47484B;
+  border: solid white;
+  border-radius: 25px;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 38px 6px white;
+  padding: 2%;
+  font-weight: 900%;
+}
+:root.design span {
+  margin-right: 10px;
+  font-size: 180%;
+  margin-top: auto;
+  margin-bottom: auto;
+  transition: 1s;
+}
+:root.design #todolist {
+  width: 100%;
+}
+:root.design article {
+  display: flex;
+  margin-top: 2%;
+  position: relative;
+}
+:root.design .text {
+  display: inline-block;
+  color: #5d98b0;
+  width: calc(90%);
+  white-space: normal;
+  word-wrap: break-word;
+}
+:root.design .text:focus {
+  background-color: #5d98b0;
+  color: #47484B;
+  padding-left: 10px;
+  border-radius: 5px;
+}
+:root.design img {
+  width: 20px;
+  transition: all 0.5s ease-out;
+  margin-left: 3px;
+  position: absolute;
+  right: 0;
+}
+:root.design .checkbox {
+  width: 30px;
+  background-color: #5d98b0;
+  transition: all 0.5s ease-out;
+}
+:root.design .checkbox:focus {
+  box-shadow: 0 0 5px 5px #5d98b0;
+  /*  -webkit-filter: drop-shadow(0px 0px 5px white);
+  filter: drop-shadow(10px 5px 10px white);*/
+}
+:root.design article img:focus {
+  box-shadow: 0 0 5px 5px #5d98b0;
+  /*  -webkit-filter: drop-shadow(0px 0px 5px white);
+  filter: drop-shadow(10px 5px 10px white);*/
+}
+:root.design #retour {
+  border: solid ;
+  background: #7f7f7f;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 80%;
+  margin: -2%;
+  padding: 15px;
+  width: 240px;
+  border-radius: 25px;
+  border-width: 4px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  box-shadow: inset 1px 6px 30px 2px #fcfeff;
+  transition: 2s;
+}
+:root.design #retour:hover {
+  background-image: radial-gradient(#e6e6fa, dimgrey);
+  opacity: 100%;
+}
+:root.design #retour a {
+  color: green;
+  font-size: 20px;
+}
+:root.design .titre {
+  color: white;
+  font-family: 'Pacifico', cursive;
+  font-size: 40px;
+  margin-left: 100px;
+  margin-bottom: 30px;
+  margin-right: 86%;
+  transition: 2s;
+}
+:root.design .checkbox:hover {
+  -moz-box-shadow: 0 0 5px 5px #5d98b0;
+  -webkit-box-shadow: 0 0 5px 5px #5d98b0;
+  box-shadow: 0 0 5px 5px #5d98b0;
+}
+:root.design .text:hover {
+  border-left: 5px solid #5d98b0;
+  border-right: 5px solid #5d98b0;
+  background-color: darkgray;
+  border-radius: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+:root.design article img:hover {
+  -moz-box-shadow: 0 0 5px 5px #5d98b0;
+  -webkit-box-shadow: 0 0 5px 5px #5d98b0;
+  box-shadow: 0 0 5px 5px #5d98b0;
+}
+:root.design #todolist:empty::after {
+  content: "Veuillez entrer une nouvelle tâche à faire !";
+  display: block;
+  text-align: center;
+  color: #41ADF2;
+  margin-top: 10px;
+}
+:root.design #donelist .text {
+  color: white;
+  text-decoration: line-through;
+  opacity: 0.8;
+}
+:root.design #donelist .text {
+  color: gray;
+}
+:root.design .tache {
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /*.tache:hover button{
+
+    color: coral;
+    background-color: black;
+    opacity: 100%;
+   
+}*/
+}
+:root.design .tache button {
+  color: white;
+  background-color: #47484B;
+}
+:root.design .tache #btncompleter {
+  flex: 1;
+}
+:root.design .tache #btnEffacer {
+  flex: 1;
+  text-align: center;
+}
+:root.design .tache #btnEffacer img {
+  margin-right: 5px;
+  filter: grayscale(1);
+}
+:root.design .tache .tache button {
+  color: red;
+  background-color: black;
+}
+:root.design .tache #btncompleter:hover {
+  color: coral;
+  background-color: black;
+  opacity: 100%;
+}
+:root.design .tache #btnEffacer:hover {
+  color: coral;
+  background-color: black;
+  opacity: 100%;
+}
+:root.design .tache .tache:hover img {
+  filter: grayscale(0);
+}
+:root.design .tache #btncompleter:disabled {
+  display: none;
+}
+:root.design .tache #btnEffacer:disabled {
+  display: none;
+}
+@media screen and (max-width: 361px) {
+  :root.design span {
+    font-size: 0;
+  }
+}
+@media screen and (max-height: 480px) {
+  :root.design .titre {
+    margin-top: -90px;
+  }
+  :root.design #retour {
+    margin-top: -90px;
+    margin-right: -140px;
+  }
+  :root.design #retour:hover {
+    margin-top: -5px;
+    margin-right: -8px;
+  }
+}
+:root.design .leskin {
+  font-size: 20px;
+  margin-right: 5px;
+}

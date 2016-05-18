@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr" class="red-on-black">
+<head>
+<title>TP1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="stylesheet/less" type="text/css" href="skin.less">
+       <!--<<link rel="stylesheet"  href="styles.min.css">-->
+    <link rel="stylesheet" target=_blank href="styles.min.css"/>
+   <!-- <link rel="stylesheet/less" type="text/css" href="styletd.less" />
+    <!-- <link rel="stylesheet" type="text/css" href="../../common/css/common_style.css">
+    <!-- <link rel="stylesheet" type="text/css" media="screen and (max-width: 361px) " href="mediaquery.css">-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"</script
+    <script src="../../common/icone/icon.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
+    <!-- <link rel="stylesheet/less" type="text/css" href="styles.less" />-->
+     <!-- <script src="less.js" type="text/javascript"></script>-->
+</head>
+
+  
+<body>
+
+    <div class="titre">Todo</div>  
+
+     <h1 id="retour"><a href="../home/index.html">Retour à l'accueil</a>
+         </br>
+     <div class="leskin">Skin:
+       <select id="selectSkin" >
+          
+           <option value="" selected> Red on black</option>
+           <option value="blue-on-orange"> Blue on orange</option>
+           <option value="design"> blue on move</option>
+         
+         </select> </div>
+    </h1>
+
+    <div class="todo">
+
+        <header>
+            <span class="hide-on-small-screen">Todo</span
+            ><input type="text" id="input" placeholder="entrez ici ..." autofocus>  
+        </header>
+
+        <div id="alltasks">
+          <div id="todolist"></div>
+          <div id="donelist"></div>
+            
+  <template>
+    <article
+       ><input type="checkbox" class="checkbox" 
+        ><div class="text" tabindex="0" contenteditable> Chose à faire</div
+        ><img src="imagetd/delete.png" alt="delete" tabindex="0"/></article>
+</template>
+            
+     <p class="para"></p>       
+    </div>
+        
+        
+        
+        </div>
+      
+    <div class="tache">
+      
+    <button id="btncompleter"><input type="checkbox"/>Marquer toues les tâches comme complétées</button>
+        
+        <button id="btnEffacer"><img  src="imagetd/delete1.png" alt="delete"/>Effacer les taches complétées</button>
+    
+    </div>
+		
+ 
+<script src="todoscript.js"></script>
+</body>
+</html>
+
+
